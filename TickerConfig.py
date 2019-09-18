@@ -4,21 +4,23 @@
 # 如果这个时候捡漏捡到的话，也是可以付款成功的，也就是说，捡漏+候补，可以最大程度提升抢票成功率
 
 # 刷票模式：1=刷票 2=候补+刷票
-TICKET_TYPE = 1
+TICKET_TYPE = 2
 
 # 出发日期(list) "2018-01-06", "2018-01-07"
-STATION_DATES = []
+STATION_DATES = [
+    "2019-10-02"
+]
 
 # 填入需要购买的车次(list)，"G1353"
 # 修改车次填入规则，注：(以前设置的车次逻辑不变)，如果车次填入为空，那么就是当日乘车所有车次都纳入筛选返回
 # 不填车次是整个list为空才算，如果不是为空，依然会判断车次的，这种是错误的写法 [""], 正确的写法 []
-STATION_TRAINS = []
+STATION_TRAINS = ["C7635"]
 
 # 出发城市，比如深圳北，就填深圳就搜得到
-FROM_STATION = ""
+FROM_STATION = "小榄"
 
 # 到达城市 比如深圳北，就填深圳就搜得到
-TO_STATION = ""
+TO_STATION = "珠海"
 
 # 座位(list) 多个座位ex:
 # "商务座",
@@ -30,7 +32,9 @@ TO_STATION = ""
 # "硬座",
 # "无座",
 # "动卧",
-SET_TYPE = []
+SET_TYPE = [
+    "二等座",
+]
 
 # 当余票小于乘车人，如果选择优先提交，则删减联系人和余票数一致在提交
 # bool
@@ -40,12 +44,12 @@ IS_MORE_TICKET = True
 # - "张三"
 # - "李四"
 TICKET_PEOPLES = [
-    "",
+    "韦永昌",
 ]
 
 # 12306登录账号
-USER = ""
-PWD = ""
+USER = "wyc888168@qq.com"
+PWD = "wyc_2013"
 
 # 加入小黑屋时间默认为5分钟，此功能为了防止僵尸票导致一直下单不成功错过正常的票
 TICKET_BLACK_LIST_TIME = 5
@@ -71,12 +75,12 @@ AUTO_CODE_TYPE = 2
 #  password: "授权码"
 #  host: "smtp.qq.com"
 EMAIL_CONF = {
-    "IS_MAIL": True,
-    "email": "",
-    "notice_email_list": "",
-    "username": "",
-    "password": "",
-    "host": "smtp.qq.com",
+    "IS_MAIL": False,
+    # "email": "931128603@qq.com",
+    # "notice_email_list": "931128603@qq.com",
+    # "username": "931128603@qq.com",
+    # "password": "lwvgfrcydzyvbfjf",
+    # "host": "smtp.qq.com",
 }
 
 # 是否开启 server酱 微信提醒， 使用前需要前往 http://sc.ftqq.com/3.version 扫码绑定获取 SECRET 并关注获得抢票结果通知的公众号
@@ -104,13 +108,13 @@ ORDER_MODEL = 2
 IS_PROXY = 0
 
 # 预售放票时间, 如果是捡漏模式，可以忽略此操作
-OPEN_TIME = "13:00:00"
+#OPEN_TIME = "13:00:00"
 # 1=使用selenium获取devicesID
 # 2=使用网页端/otn/HttpZF/logdevice获取devicesId，这个接口的算法目前可能有点问题，如果登录一直302的请改为配置1
 COOKIE_TYPE = 1
 # 如果COOKIE_TYPE=1，则需配置chromeDriver路径,下载地址http://chromedriver.storage.googleapis.com/index.html
 # chromedriver配置版本只要和chrome的大版本匹配就行
-CHROME_PATH = ""
+CHROME_PATH = "C:\\Users\\eieyown\\repo\\12306\\chromedriver"
 
 # 1=>为一直随机ua,2->只启动的时候随机一次ua
 RANDOM_AGENT = 2
