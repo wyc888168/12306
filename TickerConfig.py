@@ -33,7 +33,7 @@ TO_STATION = "珠海"
 # "无座",
 # "动卧",
 SET_TYPE = [
-    "二等座",
+    "二等座"
 ]
 
 # 当余票小于乘车人，如果选择优先提交，则删减联系人和余票数一致在提交
@@ -44,7 +44,7 @@ IS_MORE_TICKET = True
 # - "张三"
 # - "李四"
 TICKET_PEOPLES = [
-    "韦永昌",
+    "韦永昌"
 ]
 
 # 12306登录账号
@@ -108,13 +108,13 @@ ORDER_MODEL = 2
 IS_PROXY = 0
 
 # 预售放票时间, 如果是捡漏模式，可以忽略此操作
-#OPEN_TIME = "13:00:00"
+OPEN_TIME = "13:00:00"
 # 1=使用selenium获取devicesID
 # 2=使用网页端/otn/HttpZF/logdevice获取devicesId，这个接口的算法目前可能有点问题，如果登录一直302的请改为配置1
 COOKIE_TYPE = 1
 # 如果COOKIE_TYPE=1，则需配置chromeDriver路径,下载地址http://chromedriver.storage.googleapis.com/index.html
 # chromedriver配置版本只要和chrome的大版本匹配就行
-CHROME_PATH = "C:\\Users\\eieyown\\repo\\12306\\chromedriver"
+CHROME_PATH = "C:\\Users\\eieyown\\repo\\12306\\chromedriver.exe"
 
 # 1=>为一直随机ua,2->只启动的时候随机一次ua
 RANDOM_AGENT = 2
@@ -123,12 +123,12 @@ PASSENGER_TICKER_STR = {
     '一等座': 'M',
     '特等座': 'P',
     '二等座': 'O',
-    '商务座': 9,
-    '硬座': 1,
-    '无座': 1,
-    '软座': 2,
-    '软卧': 4,
-    '硬卧': 3,
+    '商务座': "9",
+    '硬座': "1",
+    '无座': "1",
+    '软座': "2",
+    '软卧': "3",
+    '硬卧': "4",
 }
 
 # 保护12306官网请求频率，设置随机请求时间，原则为5分钟不大于80次
